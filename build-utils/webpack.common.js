@@ -2,7 +2,7 @@
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-module.exports = (isDevelopment, path, webpack, envKeys) => ({
+module.exports = (path, webpack, envKeys) => ({
     entry: {
         app: "./src/index.js",
     },
@@ -10,6 +10,7 @@ module.exports = (isDevelopment, path, webpack, envKeys) => ({
         filename: "[name].[hash].js",
         publicPath: "/",
         path: path.resolve(__dirname, "../", "public"),
+        // used for codesplitting
         chunkFilename: "[name].[hash].js",
     },
     module: {

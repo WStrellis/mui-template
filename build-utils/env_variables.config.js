@@ -1,4 +1,3 @@
-const fs = require("fs")
 module.exports = (env, path, dotenv) => {
     // get variables from .env if exists
     let fileEnv = dotenv.config().parsed
