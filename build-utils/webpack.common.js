@@ -8,7 +8,6 @@ module.exports = (path, webpack, envKeys) => ({
     },
     output: {
         filename: "[name].[hash].js",
-        publicPath: "/",
         path: path.resolve(__dirname, "../", "public"),
         // used for codesplitting
         chunkFilename: "[name].[hash].js",
@@ -77,7 +76,7 @@ module.exports = (path, webpack, envKeys) => ({
             title: "Westley's Material UI Template",
             favicon: "./src/assets/images/favicon.png",
         }),
-        // put css in separate file from js
+        // inject environment variables
         new webpack.DefinePlugin(envKeys),
     ],
 })

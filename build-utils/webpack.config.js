@@ -9,7 +9,7 @@ module.exports = env => {
     // environment specific settings
     const envConfig = require(`./webpack.${env.env}.js`)
     // prepare environment variables
-    const envKeys = configEnvKeys(env, path, dotenv)
+    const envKeys = configEnvKeys(dotenv)
     console.log("Process.env keys available to client:", envKeys)
     // merge webpack configs based on current env
     const result = webpackMerge(
