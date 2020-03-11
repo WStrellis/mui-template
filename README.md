@@ -9,6 +9,9 @@ The Webpack scripts will need additional configuration to handle css files.
 # Getting Started
 
 -   Clone this repository
+-   If you are not using Material UI in your project:
+    -   Run `npm uninstall --save @material-ui/core @material-ui/icons`
+    -   Delete MUI components in `index.js`
 -   Run `npm i && npm i -D` to install all of the dependencies
 -   Create a `.env` file to store secrets. All secrets must be prepended with 'REACT_APP\_' or they will be ignored by the Webpack bundler.
 -   Update the meta attributes in `index.html` and line 76 in `build-utils/webpack.common.js`
